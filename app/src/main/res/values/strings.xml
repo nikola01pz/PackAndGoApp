@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pack and Go</string>
+    <string name="new_trip">Add new trip</string>
+    <string name="current_trip">Current trip</string>
+    <string name="trip_history">Trip history</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="motivational_message">Be creative!</string>
+    <string name="tab_layout_description">Switching between trip tabs</string>
+
+    <string name="btn_add">Add</string>
+    <string name="btn_remove">Remove</string>
+    <string name="create_new_trip">Create new trip</string>
+
+    <string name="packing_list">Packing List</string>
+    <string name="to_visit">To visit</string>
+    <string name="photo_ideas">Photo ideas</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

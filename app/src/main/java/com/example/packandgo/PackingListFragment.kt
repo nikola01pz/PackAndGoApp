@@ -1,55 +1,65 @@
 package com.example.packandgo
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import java.util.*
+import kotlin.collections.ArrayList
 
-/**
- * A simple [Fragment] subclass.
- * Use the [PackingList.newInstance] factory method to
- * create an instance of this fragment.
- */
-class PackingList : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
+    private val db = Firebase.firestore
+    private lateinit var recyclerAdapter: TasksRecyclerAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_packing_list, container, false)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_packingList)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_packing_list, container, false)
-    }
+        db.collection("tasks")
+            .get()
+            .addOnSuccessListener { result ->
+                val taskList = ArrayList<Task>()
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PackingList.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic fun newInstance(param1: String, param2: String) =
-            PackingList().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                taskList.add(Task(UUID.randomUUID().toString(),"Peri zube", "jako"))
+                taskList.add(Task(UUID.randomUUID().toString(),"Obuci se", "lijepo"))
+                taskList.add(Task(UUID.randomUUID().toString(),"Nasmij se", " "))
+                for (data in result.documents) {
+                    val task = data.toObject(Task::class.java)
+                    if (task != null) {
+                        task.id = data.id
+                        taskList.add(task)
+                    }
+                }
+                recyclerAdapter = TasksRecyclerAdapter(taskList, this@PackingList)
+                recyclerView.apply {
+                    layoutManager = LinearLayoutManager(this@PackingList.context)
+                    adapter = recyclerAdapter
                 }
             }
+            .addOnFailureListener { exception ->
+                Log.w("PackingList", "Error getting documents.", exception)
+            }
+        return view
+    }
+
+    override fun onItemButtonClick(index: Int, task: Task, clickType: ItemClickType) {
+        when (clickType) {
+            ItemClickType.EDIT -> {
+                db.collection("tasks").document(task.id).set(task)
+            }
+            ItemClickType.REMOVE -> {
+                recyclerAdapter.removeItem(index)
+                db.collection("tasks").document(task.id).delete()
+            }
+        }
     }
 }

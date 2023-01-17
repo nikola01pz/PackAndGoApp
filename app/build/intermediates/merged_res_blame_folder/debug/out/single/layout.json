@@ -1,30 +1,34 @@
 [
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/activity_current_trip.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/activity_current_trip.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/recycler_item.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/recycler_item.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/activity_main.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/activity_main.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/fragment_photo_ideas.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/fragment_photo_ideas.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/fragment_photo_ideas.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/fragment_photo_ideas.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/fragment_packing_list.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/fragment_packing_list.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/fragment_packing_list.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/fragment_packing_list.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/fragment_to_visit.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/fragment_to_visit.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/activity_trip_history.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/activity_trip_history.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/activity_new_trip.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/activity_new_trip.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_trip_history.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_trip_history.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-28:/layout/fragment_to_visit.xml",
-        "source": "com.example.packandgo.app-main-31:/layout/fragment_to_visit.xml"
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_new_trip.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_new_trip.xml"
+    },
+    {
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_current_trip.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_current_trip.xml"
     }
 ]

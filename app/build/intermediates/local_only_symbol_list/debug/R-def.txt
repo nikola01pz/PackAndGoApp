@@ -11,10 +11,12 @@ color teal_700
 color white
 drawable background
 drawable go_home
+drawable ic_baseline_add_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id add_task_button
 id btn_create_new_trip
 id btn_current_trip
 id btn_go_home_from_current

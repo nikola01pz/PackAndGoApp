@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -24,14 +26,26 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
         val view = inflater.inflate(R.layout.fragment_packing_list, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_packingList)
 
+        val addButton = view.findViewById<FloatingActionButton>(R.id.add_task_button)
+
+        addButton.setOnClickListener {
+            val newTask = Task(UUID.randomUUID().toString(), "New task", "")
+            db.collection("tasks").add(newTask)
+                .addOnSuccessListener { documentReference ->
+                    newTask.id = documentReference.id
+                    recyclerAdapter.addItem(newTask)
+                }
+                .addOnFailureListener { e ->
+                    Log.w("PackingList", "Error adding task", e)
+                    Toast.makeText(context, "Error adding task", Toast.LENGTH_SHORT).show()
+                }
+        }
+
         db.collection("tasks")
             .get()
             .addOnSuccessListener { result ->
                 val taskList = ArrayList<Task>()
 
-                taskList.add(Task(UUID.randomUUID().toString(),"Peri zube", "jako"))
-                taskList.add(Task(UUID.randomUUID().toString(),"Obuci se", "lijepo"))
-                taskList.add(Task(UUID.randomUUID().toString(),"Nasmij se", " "))
                 for (data in result.documents) {
                     val task = data.toObject(Task::class.java)
                     if (task != null) {

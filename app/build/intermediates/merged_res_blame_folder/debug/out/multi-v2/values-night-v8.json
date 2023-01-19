@@ -38,14 +38,14 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Admin\\StudioProjects\\PackAndGo\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\Admin\\StudioProjects\\PackAndGoApp\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "100",
+                        "startOffsets": "102",
                         "endLines": "14",
                         "endColumns": "12",
-                        "endOffsets": "798"
+                        "endOffsets": "812"
                     },
                     "to": {
                         "startLines": "33",

@@ -1,34 +1,42 @@
 [
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/recycler_item.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/recycler_item.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/fragment_photo_ideas.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/fragment_photo_ideas.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\activity_current_trip.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_current_trip.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\activity_new_trip.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_new_trip.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\fragment_to_visit.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\fragment_to_visit.xml"
     },
     {
         "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/fragment_packing_list.xml",
         "source": "com.example.packandgo.app-main-36:/layout/fragment_packing_list.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/fragment_to_visit.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/fragment_to_visit.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\recycler_view.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\recycler_view.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_main.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\activity_trip_history.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_trip_history.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_trip_history.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/activity_trip_history.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\fragment_photo_ideas.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\fragment_photo_ideas.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_new_trip.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/activity_new_trip.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\recycler_item.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\recycler_item.xml"
     },
     {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_current_trip.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/activity_current_trip.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\fragment_packing_list.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\fragment_packing_list.xml"
     }
 ]

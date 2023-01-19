@@ -1,55 +1,94 @@
 package com.example.packandgo
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import java.util.*
+import kotlin.collections.ArrayList
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ToVisit.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ToVisit : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
+    private val db = Firebase.firestore
+    private lateinit var recyclerAdapter: TasksRecyclerAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_to_visit, container, false)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_toVisit)
+        val addButton = view.findViewById<FloatingActionButton>(R.id.add_task_button_toVisit)
+        addButton.setOnClickListener {
+            val newTask = Task(UUID.randomUUID().toString(),false, "", "")
+            db.collection("toVisitList").add(newTask)
+                .addOnSuccessListener { documentReference ->
+                    newTask.id = documentReference.id
+                    recyclerAdapter.addItem(newTask)
+                }
+                .addOnFailureListener { e ->
+                    Log.w("ToVisitList", "Error adding task", e)
+                    Toast.makeText(context, "Error adding task", Toast.LENGTH_SHORT).show()
+                }
         }
-    }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_to_visit, container, false)
-    }
+        db.collection("toVisitList")
+            .get()
+            .addOnSuccessListener { result ->
+                val taskList = ArrayList<Task>()
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ToVisit.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic fun newInstance(param1: String, param2: String) =
-            ToVisit().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                for (data in result.documents) {
+                    val task = data.toObject(Task::class.java)
+                    if (task != null) {
+                        task.id = data.id
+                        taskList.add(task)
+                    }
+                }
+                recyclerAdapter = TasksRecyclerAdapter(taskList, this@ToVisit, this)
+                recyclerView.apply {
+                    layoutManager = LinearLayoutManager(this@ToVisit.context)
+                    adapter = recyclerAdapter
                 }
             }
+            .addOnFailureListener { exception ->
+                Log.w("ToVisitList", "Error getting documents.", exception)
+            }
+        return view
+    }
+
+    override fun onItemButtonClick(index: Int, task: Task, clickType: ItemClickType) {
+        when (clickType) {
+            ItemClickType.EDIT -> {
+                val nameEditText = view?.findViewById<EditText>(R.id.taskName)
+                val descriptionEditText = view?.findViewById<EditText>(R.id.taskDescription)
+                val checkbox = view?.findViewById<CheckBox>(R.id.checkbox)
+                val isChecked = checkbox?.isChecked ?: false
+                val updatedTask = Task(task.id, isChecked,nameEditText?.text.toString(), descriptionEditText?.text.toString())
+
+                db.collection("toVisitList").document(task.id).set(updatedTask)
+                    .addOnSuccessListener {
+                        recyclerAdapter.updateItem(index, updatedTask)
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w("ToVisitList", "Error updating task", e)
+                        Toast.makeText(context, "Error updating task", Toast.LENGTH_SHORT).show()
+                    }
+            }
+            ItemClickType.REMOVE -> {
+                recyclerAdapter.removeItem(index)
+                db.collection("toVisitList").document(task.id).delete()
+            }
+        }
     }
 }

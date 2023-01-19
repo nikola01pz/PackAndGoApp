@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,11 +28,10 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
         val view = inflater.inflate(R.layout.fragment_packing_list, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_packingList)
 
-        val addButton = view.findViewById<FloatingActionButton>(R.id.add_task_button)
-
+        val addButton = view.findViewById<FloatingActionButton>(R.id.add_task_button_packingList)
         addButton.setOnClickListener {
-            val newTask = Task(UUID.randomUUID().toString(), "New task", "")
-            db.collection("tasks").add(newTask)
+            val newTask = Task(UUID.randomUUID().toString(),false, "", "")
+            db.collection("packingList").add(newTask)
                 .addOnSuccessListener { documentReference ->
                     newTask.id = documentReference.id
                     recyclerAdapter.addItem(newTask)
@@ -41,8 +41,7 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
                     Toast.makeText(context, "Error adding task", Toast.LENGTH_SHORT).show()
                 }
         }
-
-        db.collection("tasks")
+        db.collection("packingList")
             .get()
             .addOnSuccessListener { result ->
                 val taskList = ArrayList<Task>()
@@ -54,7 +53,7 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
                         taskList.add(task)
                     }
                 }
-                recyclerAdapter = TasksRecyclerAdapter(taskList, this@PackingList)
+                recyclerAdapter = TasksRecyclerAdapter(taskList, this@PackingList, this)
                 recyclerView.apply {
                     layoutManager = LinearLayoutManager(this@PackingList.context)
                     adapter = recyclerAdapter
@@ -71,9 +70,11 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
             ItemClickType.EDIT -> {
                 val nameEditText = view?.findViewById<EditText>(R.id.taskName)
                 val descriptionEditText = view?.findViewById<EditText>(R.id.taskDescription)
-                val updatedTask = Task(task.id, nameEditText?.text.toString(), descriptionEditText?.text.toString())
+                val checkbox = view?.findViewById<CheckBox>(R.id.checkbox)
+                val isChecked = checkbox?.isChecked ?: false
+                val updatedTask = Task(task.id, isChecked,nameEditText?.text.toString(), descriptionEditText?.text.toString())
 
-                db.collection("tasks").document(task.id).set(updatedTask)
+                db.collection("packingList").document(task.id).set(updatedTask)
                     .addOnSuccessListener {
                         recyclerAdapter.updateItem(index, updatedTask)
                     }
@@ -84,7 +85,7 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
             }
             ItemClickType.REMOVE -> {
                 recyclerAdapter.removeItem(index)
-                db.collection("tasks").document(task.id).delete()
+                db.collection("packingList").document(task.id).delete()
             }
         }
     }

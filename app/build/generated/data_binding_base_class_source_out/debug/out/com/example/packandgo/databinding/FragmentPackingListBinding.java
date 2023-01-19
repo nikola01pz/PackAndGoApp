@@ -21,15 +21,16 @@ public final class FragmentPackingListBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final FloatingActionButton addTaskButton;
+  public final FloatingActionButton addTaskButtonPackingList;
 
   @NonNull
   public final RecyclerView recyclerViewPackingList;
 
   private FragmentPackingListBinding(@NonNull FrameLayout rootView,
-      @NonNull FloatingActionButton addTaskButton, @NonNull RecyclerView recyclerViewPackingList) {
+      @NonNull FloatingActionButton addTaskButtonPackingList,
+      @NonNull RecyclerView recyclerViewPackingList) {
     this.rootView = rootView;
-    this.addTaskButton = addTaskButton;
+    this.addTaskButtonPackingList = addTaskButtonPackingList;
     this.recyclerViewPackingList = recyclerViewPackingList;
   }
 
@@ -60,9 +61,9 @@ public final class FragmentPackingListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.add_task_button;
-      FloatingActionButton addTaskButton = ViewBindings.findChildViewById(rootView, id);
-      if (addTaskButton == null) {
+      id = R.id.add_task_button_packingList;
+      FloatingActionButton addTaskButtonPackingList = ViewBindings.findChildViewById(rootView, id);
+      if (addTaskButtonPackingList == null) {
         break missingId;
       }
 
@@ -72,7 +73,7 @@ public final class FragmentPackingListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentPackingListBinding((FrameLayout) rootView, addTaskButton,
+      return new FragmentPackingListBinding((FrameLayout) rootView, addTaskButtonPackingList,
           recyclerViewPackingList);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color gray
 color ic_launcher_background
 color purple_200
 color purple_500
@@ -16,9 +17,12 @@ drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-id add_task_button
+id add_task_button_packingList
+id add_task_button_photoIdeas
+id add_task_button_toVisit
 id btn_go_home_from_current
 id btn_my_trip
+id checkbox
 id deleteButton
 id editButton
 id recyclerView_packingList

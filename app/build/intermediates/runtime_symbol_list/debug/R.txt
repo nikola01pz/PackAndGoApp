@@ -1342,6 +1342,7 @@ int color error_color_material_dark 0x7f050063
 int color error_color_material_light 0x7f050064
 int color foreground_material_dark 0x7f050065
 int color foreground_material_light 0x7f050066
+int color gray 0x7f05026f
 int color highlighted_text_material_dark 0x7f050067
 int color highlighted_text_material_light 0x7f050068
 int color ic_launcher_background 0x7f050069
@@ -2754,7 +2755,9 @@ int id action_text 0x7f080043
 int id actions 0x7f080044
 int id activity_chooser_view_content 0x7f080045
 int id add 0x7f080046
-int id add_task_button 0x7f080047
+int id add_task_button_packingList 0x7f0801f3
+int id add_task_button_photoIdeas 0x7f0801fb
+int id add_task_button_toVisit 0x7f0801f4
 int id adjust_height 0x7f080048
 int id adjust_width 0x7f080049
 int id alertTitle 0x7f08004a

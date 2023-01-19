@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.packandgo.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +21,16 @@ public final class FragmentPhotoIdeasBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final FloatingActionButton addTaskButtonPhotoIdeas;
+
+  @NonNull
   public final RecyclerView recyclerViewPhotoIdeas;
 
   private FragmentPhotoIdeasBinding(@NonNull FrameLayout rootView,
+      @NonNull FloatingActionButton addTaskButtonPhotoIdeas,
       @NonNull RecyclerView recyclerViewPhotoIdeas) {
     this.rootView = rootView;
+    this.addTaskButtonPhotoIdeas = addTaskButtonPhotoIdeas;
     this.recyclerViewPhotoIdeas = recyclerViewPhotoIdeas;
   }
 
@@ -55,13 +61,20 @@ public final class FragmentPhotoIdeasBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.add_task_button_photoIdeas;
+      FloatingActionButton addTaskButtonPhotoIdeas = ViewBindings.findChildViewById(rootView, id);
+      if (addTaskButtonPhotoIdeas == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerView_photoIdeas;
       RecyclerView recyclerViewPhotoIdeas = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewPhotoIdeas == null) {
         break missingId;
       }
 
-      return new FragmentPhotoIdeasBinding((FrameLayout) rootView, recyclerViewPhotoIdeas);
+      return new FragmentPhotoIdeasBinding((FrameLayout) rootView, addTaskButtonPhotoIdeas,
+          recyclerViewPhotoIdeas);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

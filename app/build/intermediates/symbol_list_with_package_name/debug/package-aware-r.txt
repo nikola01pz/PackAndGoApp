@@ -1343,6 +1343,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
@@ -2755,7 +2756,9 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id add_task_button
+id add_task_button_packingList
+id add_task_button_photoIdeas
+id add_task_button_toVisit
 id adjust_height
 id adjust_width
 id alertTitle

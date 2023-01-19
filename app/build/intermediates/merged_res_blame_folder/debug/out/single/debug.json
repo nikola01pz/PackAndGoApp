@@ -12,12 +12,16 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-debug-35:\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_main.xml"
+        "merged": "com.example.packandgo.app-merged_res-34:/layout_activity_my_trip.xml.flat",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_my_trip.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_current_trip.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_current_trip.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\xml_data_extraction_rules.xml.flat",
@@ -72,8 +76,8 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\recycler_view.xml"
     },
     {
-        "merged": "com.example.packandgo.app-merged_res-34:/layout_fragment_packing_list.xml.flat",
-        "source": "com.example.packandgo.app-main-36:/layout/fragment_packing_list.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_your_trip.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_your_trip.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\mipmap-mdpi_ic_launcher.png.flat",

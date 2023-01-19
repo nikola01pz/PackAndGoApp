@@ -10,20 +10,13 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class CurrentTripActivity : AppCompatActivity() {
+class MyTripActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
 
-
-
-    companion object{
-        const val tripName = "Trip name"
-    }
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_current_trip)
+        setContentView(R.layout.activity_my_trip)
 
         val homeButton = findViewById<Button>(R.id.btn_go_home_from_current)
         homeButton.setOnClickListener{
@@ -41,10 +34,6 @@ class CurrentTripActivity : AppCompatActivity() {
                 else -> {throw Resources.NotFoundException("Position not found")}
             }
         }.attach()
-
-        val tripName = intent.getStringExtra(tripName)
-        findViewById<TextView>(R.id.tV_current_trip_name).text=tripName
-
 
 
     }

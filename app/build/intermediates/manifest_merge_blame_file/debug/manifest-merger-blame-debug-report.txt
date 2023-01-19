@@ -67,8 +67,8 @@
 39        </activity>
 40        <activity
 40-->C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:31:9-37:20
-41            android:name="com.example.packandgo.CurrentTripActivity"
-41-->C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:32:13-48
+41            android:name="com.example.packandgo.MyTripActivity"
+41-->C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:32:13-43
 42            android:exported="false" >
 42-->C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:33:13-37
 43            <meta-data

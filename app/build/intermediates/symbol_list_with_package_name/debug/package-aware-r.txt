@@ -2785,12 +2785,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btn_create_new_trip
-id btn_current_trip
 id btn_go_home_from_current
-id btn_go_home_from_history
-id btn_new_trip
-id btn_trip_history
+id btn_my_trip
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2866,7 +2862,6 @@ id easeInOut
 id easeOut
 id east
 id editButton
-id editText_trip_name
 id edit_query
 id elastic
 id embed
@@ -3135,8 +3130,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView_app_description
 id textView_app_name
-id textView_trip_history
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3162,7 +3157,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_trip_name
 id unchecked
 id uniform
 id unlabeled
@@ -3311,10 +3305,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_current_trip
 layout activity_main
-layout activity_new_trip
-layout activity_trip_history
+layout activity_my_trip
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3426,6 +3418,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
+string app_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -3458,8 +3451,6 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string create_new_trip
-string current_trip
 string default_web_client_id
 string error_a11y_label
 string error_icon_content_description
@@ -3471,7 +3462,6 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3506,7 +3496,6 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
-string motivational_message
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -3563,7 +3552,7 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
-string new_trip
+string my_trip
 string packing_list
 string password_toggle_content_description
 string path_password_eye
@@ -3576,8 +3565,6 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string tab_layout_description
 string to_visit
-string trip_history
-string trip_name
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

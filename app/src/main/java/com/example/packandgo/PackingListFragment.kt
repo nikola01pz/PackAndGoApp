@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -68,7 +69,18 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
     override fun onItemButtonClick(index: Int, task: Task, clickType: ItemClickType) {
         when (clickType) {
             ItemClickType.EDIT -> {
-                db.collection("tasks").document(task.id).set(task)
+                val nameEditText = view?.findViewById<EditText>(R.id.taskName)
+                val descriptionEditText = view?.findViewById<EditText>(R.id.taskDescription)
+                val updatedTask = Task(task.id, nameEditText?.text.toString(), descriptionEditText?.text.toString())
+
+                db.collection("tasks").document(task.id).set(updatedTask)
+                    .addOnSuccessListener {
+                        recyclerAdapter.updateItem(index, updatedTask)
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w("PackingList", "Error updating task", e)
+                        Toast.makeText(context, "Error updating task", Toast.LENGTH_SHORT).show()
+                    }
             }
             ItemClickType.REMOVE -> {
                 recyclerAdapter.removeItem(index)

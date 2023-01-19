@@ -13,21 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val currentTripButton = findViewById<Button>(R.id.btn_current_trip)
+        val currentTripButton = findViewById<Button>(R.id.btn_my_trip)
         currentTripButton.setOnClickListener{
-            val intent = Intent(this, CurrentTripActivity::class.java)
-            startActivity(intent)
-        }
-
-        val tripHistoryButton = findViewById<Button>(R.id.btn_trip_history)
-        tripHistoryButton.setOnClickListener{
-            val intent = Intent(this, TripHistoryActivity::class.java)
-            startActivity(intent)
-        }
-
-        val newTripButton = findViewById<Button>(R.id.btn_new_trip)
-        newTripButton.setOnClickListener{
-            val intent = Intent(this, NewTripActivity::class.java)
+            val intent = Intent(this, MyTripActivity::class.java)
             startActivity(intent)
         }
 

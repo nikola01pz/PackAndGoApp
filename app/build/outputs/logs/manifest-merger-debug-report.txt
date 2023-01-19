@@ -190,12 +190,12 @@ ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManife
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:25:13-44
-activity#com.example.packandgo.CurrentTripActivity
+activity#com.example.packandgo.MyTripActivity
 ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:31:9-37:20
 	android:exported
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:32:13-48
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:32:13-43
 activity#com.example.packandgo.MainActivity
 ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:38:9-50:20
 	android:exported

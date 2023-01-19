@@ -21,24 +21,19 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnCurrentTrip;
+  public final Button btnMyTrip;
 
   @NonNull
-  public final Button btnNewTrip;
-
-  @NonNull
-  public final Button btnTripHistory;
+  public final TextView textViewAppDescription;
 
   @NonNull
   public final TextView textViewAppName;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCurrentTrip,
-      @NonNull Button btnNewTrip, @NonNull Button btnTripHistory,
-      @NonNull TextView textViewAppName) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnMyTrip,
+      @NonNull TextView textViewAppDescription, @NonNull TextView textViewAppName) {
     this.rootView = rootView;
-    this.btnCurrentTrip = btnCurrentTrip;
-    this.btnNewTrip = btnNewTrip;
-    this.btnTripHistory = btnTripHistory;
+    this.btnMyTrip = btnMyTrip;
+    this.textViewAppDescription = textViewAppDescription;
     this.textViewAppName = textViewAppName;
   }
 
@@ -69,21 +64,15 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_current_trip;
-      Button btnCurrentTrip = ViewBindings.findChildViewById(rootView, id);
-      if (btnCurrentTrip == null) {
+      id = R.id.btn_my_trip;
+      Button btnMyTrip = ViewBindings.findChildViewById(rootView, id);
+      if (btnMyTrip == null) {
         break missingId;
       }
 
-      id = R.id.btn_new_trip;
-      Button btnNewTrip = ViewBindings.findChildViewById(rootView, id);
-      if (btnNewTrip == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_trip_history;
-      Button btnTripHistory = ViewBindings.findChildViewById(rootView, id);
-      if (btnTripHistory == null) {
+      id = R.id.textView_app_description;
+      TextView textViewAppDescription = ViewBindings.findChildViewById(rootView, id);
+      if (textViewAppDescription == null) {
         break missingId;
       }
 
@@ -93,8 +82,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnCurrentTrip, btnNewTrip,
-          btnTripHistory, textViewAppName);
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnMyTrip, textViewAppDescription,
+          textViewAppName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

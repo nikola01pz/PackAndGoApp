@@ -24,14 +24,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.PackAndGo" >
         <activity
-            android:name="com.example.packandgo.TripHistoryActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.packandgo.NewTripActivity"
+            android:name="com.example.packandgo.NewTaskActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

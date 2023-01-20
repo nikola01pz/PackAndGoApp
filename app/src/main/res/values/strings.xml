@@ -7,9 +7,11 @@
 
     <string name="btn_add">Add</string>
     <string name="btn_remove">Remove</string>
-
+    <string name="new_task_hint">Write your note with or without description</string>
     <string name="packing_list">Packing List</string>
     <string name="to_visit">To visit</string>
     <string name="photo_ideas">Photo ideas</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_note">New Note</string>
 
 </resources>

@@ -1,5 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+anim popup_enter
+anim popup_exit
+anim slide_in
+anim slide_out
 color black
 color gray
 color ic_launcher_background
@@ -15,6 +19,7 @@ drawable go_home
 drawable ic_baseline_add_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
+drawable ic_baseline_help_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id add_task_button_packingList
@@ -25,18 +30,25 @@ id btn_my_trip
 id checkbox
 id deleteButton
 id editButton
+id helpButton
+id newTaskDescription
+id newTaskName
 id recyclerView_packingList
 id recyclerView_photoIdeas
 id recyclerView_toVisit
+id saveNewTask
 id tV_current_trip_name
 id tabLayout
 id taskDescription
 id taskName
+id textViewNewNote
 id textView_app_description
 id textView_app_name
+id textView_newTaskHint
 id viewPager
 layout activity_main
 layout activity_my_trip
+layout activity_new_task
 layout fragment_packing_list
 layout fragment_photo_ideas
 layout fragment_to_visit
@@ -54,7 +66,10 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string my_trip
+string new_note
+string new_task_hint
 string packing_list
 string photo_ideas
 string project_id

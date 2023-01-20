@@ -35,6 +35,10 @@ anim linear_indeterminate_line2_tail_interpolator
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
+anim popup_enter
+anim popup_exit
+anim slide_in
+anim slide_out
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -2603,6 +2607,7 @@ drawable googleg_standard_color_18
 drawable ic_baseline_add_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
+drawable ic_baseline_help_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2903,6 +2908,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id helpButton
 id hideable
 id home
 id homeAsUp
@@ -3003,6 +3009,8 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id newTaskDescription
+id newTaskName
 id noScroll
 id noState
 id none
@@ -3047,6 +3055,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id saveNewTask
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3133,8 +3142,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewNewNote
 id textView_app_description
 id textView_app_name
+id textView_newTaskHint
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3310,6 +3321,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_my_trip
+layout activity_new_task
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3465,6 +3477,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3556,6 +3569,8 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string my_trip
+string new_note
+string new_task_hint
 string packing_list
 string password_toggle_content_description
 string path_password_eye

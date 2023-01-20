@@ -30,6 +30,6 @@
         android:backgroundTint="@color/gray"
         android:src="@drawable/ic_baseline_add_24"
         android:layout_gravity="bottom|end"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
 </FrameLayout>

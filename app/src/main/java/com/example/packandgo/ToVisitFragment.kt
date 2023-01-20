@@ -1,27 +1,30 @@
 package com.example.packandgo
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.EditText
+
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import java.util.*
 import kotlin.collections.ArrayList
-
-
 
 class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
     private val db = Firebase.firestore
     private lateinit var recyclerAdapter: TasksRecyclerAdapter
+
+    private fun startNewTaskActivity() {
+        val intent = Intent(context, NewTaskActivity::class.java)
+        intent.putExtra("collection", "toVisitList")
+        startActivity(intent)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,18 +32,10 @@ class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_to_visit, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_toVisit)
-        val addButton = view.findViewById<FloatingActionButton>(R.id.add_task_button_toVisit)
-        addButton.setOnClickListener {
-            val newTask = Task(UUID.randomUUID().toString(),false, "", "")
-            db.collection("toVisitList").add(newTask)
-                .addOnSuccessListener { documentReference ->
-                    newTask.id = documentReference.id
-                    recyclerAdapter.addItem(newTask)
-                }
-                .addOnFailureListener { e ->
-                    Log.w("ToVisitList", "Error adding task", e)
-                    Toast.makeText(context, "Error adding task", Toast.LENGTH_SHORT).show()
-                }
+        val addTaskButton =
+            view.findViewById<FloatingActionButton>(R.id.add_task_button_toVisit)
+        addTaskButton.setOnClickListener {
+            startNewTaskActivity()
         }
 
         db.collection("toVisitList")
@@ -55,14 +50,14 @@ class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
                         taskList.add(task)
                     }
                 }
-                recyclerAdapter = TasksRecyclerAdapter(taskList, this@ToVisit, this)
+                recyclerAdapter = TasksRecyclerAdapter(taskList, this, this)
                 recyclerView.apply {
                     layoutManager = LinearLayoutManager(this@ToVisit.context)
                     adapter = recyclerAdapter
                 }
             }
             .addOnFailureListener { exception ->
-                Log.w("ToVisitList", "Error getting documents.", exception)
+                Log.w("ToVisit", "Error getting documents.", exception)
             }
         return view
     }
@@ -70,18 +65,13 @@ class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
     override fun onItemButtonClick(index: Int, task: Task, clickType: ItemClickType) {
         when (clickType) {
             ItemClickType.EDIT -> {
-                val nameEditText = view?.findViewById<EditText>(R.id.taskName)
-                val descriptionEditText = view?.findViewById<EditText>(R.id.taskDescription)
-                val checkbox = view?.findViewById<CheckBox>(R.id.checkbox)
-                val isChecked = checkbox?.isChecked ?: false
-                val updatedTask = Task(task.id, isChecked,nameEditText?.text.toString(), descriptionEditText?.text.toString())
 
-                db.collection("toVisitList").document(task.id).set(updatedTask)
+                db.collection("toVisitList").document(task.id).set(task)
                     .addOnSuccessListener {
-                        recyclerAdapter.updateItem(index, updatedTask)
+                        recyclerAdapter.updateItem(index, task)
                     }
                     .addOnFailureListener { e ->
-                        Log.w("ToVisitList", "Error updating task", e)
+                        Log.w("ToVisit", "Error updating task", e)
                         Toast.makeText(context, "Error updating task", Toast.LENGTH_SHORT).show()
                     }
             }

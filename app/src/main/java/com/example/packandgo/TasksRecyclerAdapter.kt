@@ -10,10 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-enum class ItemClickType {
-    EDIT,
-    REMOVE,
-}
 class TasksRecyclerAdapter(
     private val items: ArrayList<Task>,
     private val listener: ContentListener,
@@ -45,12 +41,12 @@ class TasksRecyclerAdapter(
             }
         }
 
-        val checkbox = holder.itemView.findViewById<CheckBox>(R.id.checkbox)
-        checkbox.isChecked = items[position].isChecked
-        checkbox.setOnClickListener {
-            items[position].isChecked = checkbox.isChecked
+        val checkboxItem = holder.itemView.findViewById<CheckBox>(R.id.checkboxItem)
+        checkboxItem.isChecked = items[position].isChecked
+        checkboxItem.setOnClickListener {
+            items[position].isChecked = checkboxItem.isChecked
             db.collection(firebaseCollectionName).document(items[position].id)
-                .update("isChecked", checkbox.isChecked)
+                .update("isChecked", checkboxItem.isChecked)
                 .addOnSuccessListener {
                     // Update successful
                 }

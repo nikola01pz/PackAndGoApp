@@ -16,6 +16,14 @@ class MyTripActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
 
+    override fun onResume() {
+        super.onResume()
+        if (intent.getStringExtra("openFragment") == "photoIdeas") {
+            viewPager.currentItem = 2
+            intent.removeExtra("openFragment")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_trip)

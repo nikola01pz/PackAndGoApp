@@ -25,12 +25,15 @@
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginTop="230dp"
+        android:backgroundTint="@color/gray"
         android:text="@string/my_trip"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_app_description" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_app_description"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:textColor="@color/black"

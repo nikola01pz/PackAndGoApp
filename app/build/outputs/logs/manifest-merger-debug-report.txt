@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\Admin\.gradle\caches\transforms-3\e94fb8418c038b8bac8123ba9b14b37e\transformed\jetified-viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.4.1] C:\Users\Admin\.gradle\caches\transforms-3\ffa8296777682c47c859f3f98f68d57a\transformed\jetified-firebase-firestore-ktx-24.4.1\AndroidManifest.xml:2:1-20:12
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\Admin\.gradle\caches\transforms-3\3a9fbc4384fbef68e6675d5f56852d33\transformed\jetified-firebase-storage-ktx-20.1.0\AndroidManifest.xml:2:1-20:12
@@ -65,22 +65,22 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Admin\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Admin\.gradle\caches\transforms-3\9364ef63cbeed23b89e23967b6422cd5\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\Admin\.gradle\caches\transforms-3\eef1be37f474703814561e4d5e9aad46\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Admin\.gradle\caches\transforms-3\8470a7f9f76fa24e4625ce9af9236f2c\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:2:11-69
@@ -107,7 +107,7 @@ MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\Admin\.gradle\caches\transfor
 	android:name
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:8:5-46:19
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:8:5-54:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.4.1] C:\Users\Admin\.gradle\caches\transforms-3\ffa8296777682c47c859f3f98f68d57a\transformed\jetified-firebase-firestore-ktx-24.4.1\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.4.1] C:\Users\Admin\.gradle\caches\transforms-3\ffa8296777682c47c859f3f98f68d57a\transformed\jetified-firebase-firestore-ktx-24.4.1\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.1.0] C:\Users\Admin\.gradle\caches\transforms-3\3a9fbc4384fbef68e6675d5f56852d33\transformed\jetified-firebase-storage-ktx-20.1.0\AndroidManifest.xml:10:5-18:19
@@ -184,28 +184,34 @@ ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManife
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:24:17-33
 	android:name
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:23:17-52
+activity#com.example.packandgo.NewTaskWithPhoto
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:27:9-33:20
+	android:exported
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:28:13-45
 activity#com.example.packandgo.MyTripActivity
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:26:9-32:20
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:34:9-40:20
 	android:exported
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:27:13-43
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:35:13-43
 activity#com.example.packandgo.MainActivity
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:33:9-45:20
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:41:9-53:20
 	android:exported
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:35:13-36
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:34:13-41
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:42:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:36:13-40:29
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:44:13-48:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:37:17-69
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:39:17-77
+ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:39:27-74
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:47:27-74
 uses-sdk
 INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml

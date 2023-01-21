@@ -1301,6 +1301,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color darker_gray
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1856,7 +1857,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
-color simplebackgroundcolor
+color simple_background_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2809,6 +2810,8 @@ id chain
 id chain2
 id chains
 id checkbox
+id checkboxItem
+id checkboxItemWithPhoto
 id checked
 id chronometer
 id circle_center
@@ -3011,6 +3014,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id newTaskDescription
 id newTaskName
+id newTaskPhotoUrl
 id noScroll
 id noState
 id none
@@ -3135,6 +3139,9 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id taskDescription
 id taskName
+id taskWithPhotoDescription
+id taskWithPhotoImage
+id taskWithPhotoName
 id text
 id text2
 id textEnd
@@ -3322,6 +3329,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_my_trip
 layout activity_new_task
+layout activity_new_taskwithphoto
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3396,6 +3404,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout recycler_item
+layout recycler_itemwithphoto
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3570,6 +3579,7 @@ string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string my_trip
 string new_note
+string new_notewithphoto
 string new_task_hint
 string packing_list
 string password_toggle_content_description
@@ -3582,6 +3592,8 @@ string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string tab_layout_description
+string task_description
+string task_name
 string to_visit
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

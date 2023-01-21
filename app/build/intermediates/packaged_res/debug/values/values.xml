@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="gray">#7A7373</color>
+    <color name="darker_gray">#555454</color>
+    <color name="gray">#CFC9C9</color>
     <color name="ic_launcher_background">#ACACAC</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="simplebackgroundcolor">#E85858</color>
+    <color name="simple_background_color">#E85858</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
@@ -23,11 +24,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="my_trip">My trip</string>
     <string name="new_note">New Note</string>
+    <string name="new_notewithphoto">New Photo Idea</string>
     <string name="new_task_hint">Write your note with or without description</string>
     <string name="packing_list">Packing List</string>
     <string name="photo_ideas">Photo ideas</string>
     <string name="project_id" translatable="false">db-packandgo</string>
     <string name="tab_layout_description">Switching between trip tabs</string>
+    <string name="task_description">Description</string>
+    <string name="task_name">Name</string>
     <string name="to_visit">To visit</string>
     <style name="Theme.PackAndGo" parent="Theme.AppCompat.Light.NoActionBar">
         

@@ -16,27 +16,22 @@ class MyTripActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
 
-    override fun onResume() {
-        super.onResume()
-        if (intent.getStringExtra("openFragment") == "photoIdeas") {
-            viewPager.currentItem = 2
-            intent.removeExtra("openFragment")
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_trip)
 
         val homeButton = findViewById<Button>(R.id.btn_go_home_from_current)
-        homeButton.setOnClickListener{
+        homeButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("collection", "packingList")
             startActivity(intent)
         }
         val helpButton = findViewById<Button>(R.id.helpButton)
         helpButton.setOnClickListener {
-            val toast = Toast.makeText(this, "If you want to mark your note as done, you need to check the checkbox and press EDIT button on the right", Toast.LENGTH_LONG)
+            val toast = Toast.makeText(
+                this,
+                "If you want to mark your note as done, you need to check the checkbox and press EDIT button on the right",
+                Toast.LENGTH_LONG
+            )
             val handler = Handler(Looper.getMainLooper())
             val runnable = Runnable { toast.cancel() }
             handler.postDelayed(runnable, 4000)
@@ -49,22 +44,23 @@ class MyTripActivity : AppCompatActivity() {
         when (intent.getStringExtra("startPage")) {
             "packingList" -> viewPager.currentItem = 0
             "toVisitList" -> viewPager.currentItem = 1
+            "photoIdeas" -> viewPager.currentItem = 2
         }
-        TabLayoutMediator(tabLayout, viewPager){ tab, index ->
-            tab.text = when(index){
-                0 -> {"Packing list"}
-                1 -> {"To visit"}
-                2 -> {"Photo ideas"}
-                else -> {throw Resources.NotFoundException("Position not found")}
+        TabLayoutMediator(tabLayout, viewPager) { tab, index ->
+            tab.text = when (index) {
+                0 -> {
+                    "Packing list"
+                }
+                1 -> {
+                    "To visit"
+                }
+                2 -> {
+                    "Photo ideas"
+                }
+                else -> {
+                    throw Resources.NotFoundException("Position not found")
+                }
             }
         }.attach()
-
-        val collection = intent.getStringExtra("collection")
-        if (collection == "packingList") {
-            viewPager.currentItem = 0
-        } else if (collection == "toVisitList") {
-            viewPager.currentItem = 1
-        }
     }
-
 }

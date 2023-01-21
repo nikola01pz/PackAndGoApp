@@ -1,6 +1,5 @@
 package com.example.packandgo
 
-import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -19,13 +18,11 @@ class NewTaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_task)
 
-        val taskNameEditText = findViewById<EditText>(R.id.newTaskName)
-        val taskDescriptionEditText = findViewById<EditText>(R.id.newTaskDescription)
         val saveButton = findViewById<ImageButton>(R.id.saveNewTask)
 
         saveButton.setOnClickListener {
-            val taskName = taskNameEditText.text.toString()
-            val taskDescription = taskDescriptionEditText.text.toString()
+            val taskName = findViewById<EditText>(R.id.newTaskName).text.toString()
+            val taskDescription = findViewById<EditText>(R.id.newTaskDescription).text.toString()
             if (taskName.isNotEmpty()) {
                 val newTask = hashMapOf(
                     "name" to taskName,
@@ -38,7 +35,6 @@ class NewTaskActivity : AppCompatActivity() {
                         .add(newTask)
                         .addOnSuccessListener { documentReference ->
                             Log.d(TAG, "Task added with ID: ${documentReference.id}")
-                            setResult(Activity.RESULT_OK)
                             startMyTripActivity(collectionName)
                         }
                         .addOnFailureListener { e ->

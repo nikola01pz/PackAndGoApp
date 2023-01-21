@@ -92,7 +92,6 @@ class TasksRecyclerAdapter(
         }
     }
 
-
     interface ContentListener {
         fun onItemButtonClick(index: Int, task: Task, clickType: ItemClickType)
     }

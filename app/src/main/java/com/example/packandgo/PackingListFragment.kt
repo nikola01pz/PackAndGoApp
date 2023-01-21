@@ -19,12 +19,6 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
     private val db = Firebase.firestore
     private lateinit var recyclerAdapter: TasksRecyclerAdapter
 
-    private fun startNewTaskActivity() {
-        val intent = Intent(context, NewTaskActivity::class.java)
-        intent.putExtra("collection", "packingList")
-        startActivity(intent)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,9 +28,10 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
         val addTaskButton =
             view.findViewById<FloatingActionButton>(R.id.add_task_button_packingList)
         addTaskButton.setOnClickListener {
-            startNewTaskActivity()
+            val intent = Intent(context, NewTaskActivity::class.java)
+            intent.putExtra("collection", "packingList")
+            startActivity(intent)
         }
-
 
         db.collection("packingList")
             .get()

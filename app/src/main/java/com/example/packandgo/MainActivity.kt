@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val currentTripButton = findViewById<Button>(R.id.btn_my_trip)
-        currentTripButton.setOnClickListener{
+        currentTripButton.setOnClickListener {
             val intent = Intent(this, MyTripActivity::class.java)
             startActivity(intent)
         }

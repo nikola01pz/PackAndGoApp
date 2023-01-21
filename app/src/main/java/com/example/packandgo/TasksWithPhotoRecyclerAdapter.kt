@@ -18,7 +18,8 @@ class TasksWithPhotoRecyclerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return TaskViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.recycler_itemwithphoto, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.recycler_itemwithphoto, parent, false)
         )
     }
 
@@ -29,7 +30,8 @@ class TasksWithPhotoRecyclerAdapter(
             }
         }
 
-        val checkboxItemWithPhoto = holder.itemView.findViewById<CheckBox>(R.id.checkboxItemWithPhoto)
+        val checkboxItemWithPhoto =
+            holder.itemView.findViewById<CheckBox>(R.id.checkboxItemWithPhoto)
         checkboxItemWithPhoto.isChecked = items[position].isChecked
         checkboxItemWithPhoto.setOnClickListener {
             items[position].isChecked = checkboxItemWithPhoto.isChecked
@@ -81,7 +83,6 @@ class TasksWithPhotoRecyclerAdapter(
             }
         }
     }
-
 
     interface ContentListener {
         fun onItemButtonClick(index: Int, task: TaskWithPhoto, clickType: ItemClickType)

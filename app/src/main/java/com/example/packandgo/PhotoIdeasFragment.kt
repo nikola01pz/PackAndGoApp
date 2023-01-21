@@ -28,7 +28,6 @@ class PhotoIdeas : Fragment(), TasksWithPhotoRecyclerAdapter.ContentListener {
             view.findViewById<FloatingActionButton>(R.id.add_task_button_photoIdeas)
         addTaskButton.setOnClickListener {
             val intent = Intent(activity, NewTaskWithPhoto::class.java)
-            intent.putExtra("collection", "photoIdeasList")
             startActivity(intent)
         }
 

@@ -20,12 +20,6 @@ class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
     private val db = Firebase.firestore
     private lateinit var recyclerAdapter: TasksRecyclerAdapter
 
-    private fun startNewTaskActivity() {
-        val intent = Intent(context, NewTaskActivity::class.java)
-        intent.putExtra("collection", "toVisitList")
-        startActivity(intent)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +29,9 @@ class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
         val addTaskButton =
             view.findViewById<FloatingActionButton>(R.id.add_task_button_toVisit)
         addTaskButton.setOnClickListener {
-            startNewTaskActivity()
+            val intent = Intent(activity, NewTaskActivity::class.java)
+            intent.putExtra("collection", "toVisitList")
+            startActivity(intent)
         }
 
         db.collection("toVisitList")

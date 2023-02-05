@@ -25,8 +25,7 @@ class PackingList : Fragment(), TasksRecyclerAdapter.ContentListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_packing_list, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_packingList)
-        val addTaskButton =
-            view.findViewById<FloatingActionButton>(R.id.add_task_button_packingList)
+        val addTaskButton = view.findViewById<FloatingActionButton>(R.id.add_task_button_packingList)
         addTaskButton.setOnClickListener {
             val intent = Intent(context, NewTaskActivity::class.java)
             intent.putExtra("collection", "packingList")

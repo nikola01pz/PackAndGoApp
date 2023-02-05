@@ -24,13 +24,11 @@ class PhotoIdeas : Fragment(), TasksWithPhotoRecyclerAdapter.ContentListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_photo_ideas, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_photoIdeas)
-        val addTaskButton =
-            view.findViewById<FloatingActionButton>(R.id.add_task_button_photoIdeas)
+        val addTaskButton = view.findViewById<FloatingActionButton>(R.id.add_task_button_photoIdeas)
         addTaskButton.setOnClickListener {
-            val intent = Intent(activity, NewTaskWithPhoto::class.java)
+            val intent = Intent(activity, NewTaskWithPhotoActivity::class.java)
             startActivity(intent)
         }
-
 
         db.collection("photoIdeasList")
             .get()

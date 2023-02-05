@@ -4,20 +4,16 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-debug-35:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_new_task.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_new_task.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\drawable-v24_background.jpg.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\drawable-v24\\background.jpg"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_my_trip.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_my_trip.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_new_task.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_new_task.xml"
     },
     {
-        "merged": "com.example.packandgo.app-merged_res-34:/layout_recycler_itemwithphoto.xml.flat",
-        "source": "com.example.packandgo.app-main-36:/layout/recycler_itemwithphoto.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_activity_my_trip.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_my_trip.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -80,12 +76,12 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-debug-35:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-debug-35:\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\anim_slide_out.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\anim\\slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-debug-35:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_fragment_packing_list.xml.flat",
@@ -98,6 +94,10 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-debug-35:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.packandgo.app-merged_res-34:/layout_activity_new_taskwithphoto.xml.flat",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_new_taskwithphoto.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-merged_res-34:\\layout_fragment_to_visit.xml.flat",

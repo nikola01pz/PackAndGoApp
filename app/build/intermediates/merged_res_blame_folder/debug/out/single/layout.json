@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\activity_new_task.xml"
     },
     {
+        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/activity_new_taskwithphoto.xml",
+        "source": "com.example.packandgo.app-main-36:/layout/activity_new_taskwithphoto.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\fragment_photo_ideas.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\fragment_photo_ideas.xml"
     },
@@ -34,9 +38,5 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-mergeDebugResources-33:\\layout\\fragment_packing_list.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\7.4\\com.example.packandgo.app-main-36:\\layout\\fragment_packing_list.xml"
-    },
-    {
-        "merged": "com.example.packandgo.app-mergeDebugResources-33:/layout/recycler_itemwithphoto.xml",
-        "source": "com.example.packandgo.app-main-36:/layout/recycler_itemwithphoto.xml"
     }
 ]

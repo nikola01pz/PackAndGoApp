@@ -29,7 +29,7 @@ class MyTripActivity : AppCompatActivity() {
         helpButton.setOnClickListener {
             val toast = Toast.makeText(
                 this,
-                "If you want to mark your note as done, you need to check the checkbox and press EDIT button on the right",
+                "If you want to edit task name or description, you can change the text and then press the edit button.",
                 Toast.LENGTH_LONG
             )
             val handler = Handler(Looper.getMainLooper())

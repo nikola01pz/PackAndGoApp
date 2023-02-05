@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,8 +25,7 @@ class ToVisit : Fragment(), TasksRecyclerAdapter.ContentListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_to_visit, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_toVisit)
-        val addTaskButton =
-            view.findViewById<FloatingActionButton>(R.id.add_task_button_toVisit)
+        val addTaskButton = view.findViewById<FloatingActionButton>(R.id.add_task_button_toVisit)
         addTaskButton.setOnClickListener {
             val intent = Intent(activity, NewTaskActivity::class.java)
             intent.putExtra("collection", "toVisitList")

@@ -42,14 +42,11 @@ class TasksRecyclerAdapter(
         }
 
         val checkboxItem = holder.itemView.findViewById<CheckBox>(R.id.checkboxItem)
-        checkboxItem.isChecked = items[position].isChecked
+        checkboxItem.isChecked = items[position].checked
         checkboxItem.setOnClickListener {
-            items[position].isChecked = checkboxItem.isChecked
+            items[position].checked = checkboxItem.isChecked
             db.collection(firebaseCollectionName).document(items[position].id)
-                .update("isChecked", checkboxItem.isChecked)
-                .addOnSuccessListener {
-                    // Update successful
-                }
+                .update("checked", checkboxItem.isChecked)
                 .addOnFailureListener { e ->
                     Log.w(firebaseCollectionName, "Error updating checkbox state", e)
                 }

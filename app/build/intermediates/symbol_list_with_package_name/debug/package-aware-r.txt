@@ -3489,6 +3489,7 @@ string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image_url
 string item_view_role_description
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
@@ -3579,7 +3580,7 @@ string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string my_trip
 string new_note
-string new_notewithphoto
+string new_note_with_photo
 string new_task_hint
 string packing_list
 string password_toggle_content_description

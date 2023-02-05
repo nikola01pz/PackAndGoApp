@@ -19,7 +19,6 @@ class NewTaskActivity : AppCompatActivity() {
         setContentView(R.layout.activity_new_task)
 
         val saveButton = findViewById<ImageButton>(R.id.saveNewTask)
-
         saveButton.setOnClickListener {
             val taskName = findViewById<EditText>(R.id.newTaskName).text.toString()
             val taskDescription = findViewById<EditText>(R.id.newTaskDescription).text.toString()
@@ -27,7 +26,7 @@ class NewTaskActivity : AppCompatActivity() {
                 val newTask = hashMapOf(
                     "name" to taskName,
                     "description" to taskDescription,
-                    "isChecked" to false
+                    "checked" to false
                 )
                 val collectionName = intent.getStringExtra("collection")
                 if (collectionName != null) {

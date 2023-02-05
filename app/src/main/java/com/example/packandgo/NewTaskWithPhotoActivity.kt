@@ -11,7 +11,7 @@ import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class NewTaskWithPhoto : AppCompatActivity() {
+class NewTaskWithPhotoActivity : AppCompatActivity() {
     private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class NewTaskWithPhoto : AppCompatActivity() {
                     "imageUrl" to taskImageUrl,
                     "name" to taskName,
                     "description" to taskDescription,
-                    "isChecked" to false
+                    "checked" to false
                 )
                 db.collection("photoIdeasList")
                     .add(newTask)
@@ -41,7 +41,6 @@ class NewTaskWithPhoto : AppCompatActivity() {
                     }
             }
         }
-
     }
 
     private fun startMyTripActivity() {

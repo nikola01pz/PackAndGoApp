@@ -184,12 +184,12 @@ ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManife
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:24:17-33
 	android:name
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:23:17-52
-activity#com.example.packandgo.NewTaskWithPhoto
+activity#com.example.packandgo.NewTaskWithPhotoActivity
 ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:27:9-33:20
 	android:exported
 		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:28:13-45
+		ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:28:13-53
 activity#com.example.packandgo.MyTripActivity
 ADDED from C:\Users\Admin\StudioProjects\PackAndGoApp\app\src\main\AndroidManifest.xml:34:9-40:20
 	android:exported

@@ -30,16 +30,12 @@ class TasksWithPhotoRecyclerAdapter(
             }
         }
 
-        val checkboxItemWithPhoto =
-            holder.itemView.findViewById<CheckBox>(R.id.checkboxItemWithPhoto)
-        checkboxItemWithPhoto.isChecked = items[position].isChecked
+        val checkboxItemWithPhoto = holder.itemView.findViewById<CheckBox>(R.id.checkboxItemWithPhoto)
+        checkboxItemWithPhoto.isChecked = items[position].checked
         checkboxItemWithPhoto.setOnClickListener {
-            items[position].isChecked = checkboxItemWithPhoto.isChecked
+            items[position].checked = checkboxItemWithPhoto.isChecked
             db.collection("photoIdeasList").document(items[position].id)
-                .update("isChecked", checkboxItemWithPhoto.isChecked)
-                .addOnSuccessListener {
-                    // Update successful
-                }
+                .update("checked", checkboxItemWithPhoto.isChecked)
                 .addOnFailureListener { e ->
                     Log.w("photoIdeasList", "Error updating checkbox state", e)
                 }
